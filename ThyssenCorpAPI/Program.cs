@@ -16,7 +16,7 @@ namespace ThyssenCorpAPI
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
-                .UseUrls("http://192.168.0.35:8080")
+                .UseUrls("http://192.168.0.35")
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
                 .Build();
