@@ -19,8 +19,7 @@ namespace ThyssenCorpAPI.Controllers
         [HttpGet("{username}")]
         public ActionResult<JToken> Get(string username)
         {
-            Console.WriteLine(FSH.GetUIdFromUsername(username).Result["uid"]);
-            return FSH.GetUIdFromUsername(username).Result;
+            return FSH.GetPlayerStatsFromUID(username).Result;
         }
 
         // GET api/fortnite/uid/username

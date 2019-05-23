@@ -14,17 +14,33 @@ namespace ThyssenCorpAPI.Helpers
     {
         private static HttpClient http = new HttpClient();
         private static string UIDpath = "https://fortnite-public-api.theapinetwork.com/prod09/users/id?username=";
-        
-        public async Task<String> GetUIdFromUsername(string name)
+
+        private static string StatsPath =
+            "https://fortnite-public-api.theapinetwork.com/prod09/users/public/br_stats_v2?user_id=";
+
+        private async Task<String> GetUIdFromUsername(string name)
         {
             JObject jo = null;
-            
+
             HttpResponseMessage response = await http.GetAsync(UIDpath + name);
             if (response.IsSuccessStatusCode)
             {
-             jo = JObject.Parse(await response.Content.ReadAsStringAsync());
+                jo = JObject.Parse(await response.Content.ReadAsStringAsync());
             }
+
             return jo["uid"].ToString();
+        }
+
+        public async Task<JToken> GetPlayerStatsFromUID(string username)
+        {
+            var uid = GetUIdFromUsername(username).Result;
+            JObject jo = null;
+            HttpResponseMessage response = await http.GetAsync(StatsPath + uid);
+            if (response.IsSuccessStatusCode)
+            {
+                jo = JObject.Parse(await response.Content.ReadAsStringAsync());
+            }
+            return jo;
         }
     }
 }
