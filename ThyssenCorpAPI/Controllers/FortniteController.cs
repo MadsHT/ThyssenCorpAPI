@@ -27,7 +27,7 @@ namespace ThyssenCorpAPI.Controllers
         [Route("compare/{inputString}")]
         public ActionResult<JArray> GetStatsCompare(string inputString)
         {
-            string[] inputStringSplit = inputString.Split(' ');
+            string[] inputStringSplit = inputString.Split('-');
 
             string username = inputStringSplit[1];
             string compareTo = inputStringSplit[0];
@@ -46,7 +46,7 @@ namespace ThyssenCorpAPI.Controllers
         [Route("soloStats/{inputString}")]
         public ActionResult<JArray> GetSoloStats(string inputString)
         {
-            string[] inputStringSplit = inputString.Split(' ');
+            string[] inputStringSplit = inputString.Split('-');
 
             string username = inputStringSplit[1];
             string compareTo = inputStringSplit[0];
