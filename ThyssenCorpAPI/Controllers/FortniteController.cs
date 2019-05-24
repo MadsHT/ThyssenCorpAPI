@@ -18,23 +18,39 @@ namespace ThyssenCorpAPI.Controllers
         // GET api/fortnite/stats/username
         [HttpGet]
         [Route("stats/{username}")]
-
         public ActionResult<JToken> Get(string username)
         {
             return FSH.GetPlayerStatsFromUsername(username).Result;
         }
 
         [HttpGet]
-        [Route("compare/{compareTo}")]
-        public ActionResult<JArray> GetStatsCompare(string compareTo, [FromQuery] String username, [FromQuery] string username2 = "IAmCBJ")
+        [Route("compare/{inputString}")]
+        public ActionResult<JArray> GetStatsCompare(string inputString)
         {
+            string[] inputStringSplit = inputString.Split(' ');
+
+            string username = inputStringSplit[1];
+            string compareTo = inputStringSplit[0];
+            string username2 = "IAmCBJ";
+
+
+            if (inputStringSplit.Length > 2)
+            {
+                username2 = inputStringSplit[2];
+            }
+
             return FSH.GetPlayerComparedStats(compareTo, username, username2);
         }
-        
+
         [HttpGet]
-        [Route("soloStats/{compareTo}")]
-        public ActionResult<JArray> GetSoloStats(string compareTo, [FromQuery] String username)
+        [Route("soloStats/{inputString}")]
+        public ActionResult<JArray> GetSoloStats(string inputString)
         {
+            string[] inputStringSplit = inputString.Split(' ');
+
+            string username = inputStringSplit[1];
+            string compareTo = inputStringSplit[0];
+            
             return FSH.GetSoloStat(compareTo, username);
         }
     }
