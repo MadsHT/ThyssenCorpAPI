@@ -1,0 +1,14 @@
+/Users/madsthyssen/Documents/github/ThyssenCorpAPI/ThyssenCorpAPI/bin/Release/netcoreapp2.2/ThyssenCorpAPI.deps.json
+/Users/madsthyssen/Documents/github/ThyssenCorpAPI/ThyssenCorpAPI/bin/Release/netcoreapp2.2/ThyssenCorpAPI.runtimeconfig.json
+/Users/madsthyssen/Documents/github/ThyssenCorpAPI/ThyssenCorpAPI/bin/Release/netcoreapp2.2/ThyssenCorpAPI.runtimeconfig.dev.json
+/Users/madsthyssen/Documents/github/ThyssenCorpAPI/ThyssenCorpAPI/bin/Release/netcoreapp2.2/ThyssenCorpAPI.dll
+/Users/madsthyssen/Documents/github/ThyssenCorpAPI/ThyssenCorpAPI/bin/Release/netcoreapp2.2/ThyssenCorpAPI.pdb
+/Users/madsthyssen/Documents/github/ThyssenCorpAPI/ThyssenCorpAPI/obj/Release/netcoreapp2.2/ThyssenCorpAPI.csprojAssemblyReference.cache
+/Users/madsthyssen/Documents/github/ThyssenCorpAPI/ThyssenCorpAPI/obj/Release/netcoreapp2.2/ThyssenCorpAPI.csproj.CoreCompileInputs.cache
+/Users/madsthyssen/Documents/github/ThyssenCorpAPI/ThyssenCorpAPI/obj/Release/netcoreapp2.2/ThyssenCorpAPI.RazorAssemblyInfo.cache
+/Users/madsthyssen/Documents/github/ThyssenCorpAPI/ThyssenCorpAPI/obj/Release/netcoreapp2.2/ThyssenCorpAPI.RazorAssemblyInfo.cs
+/Users/madsthyssen/Documents/github/ThyssenCorpAPI/ThyssenCorpAPI/obj/Release/netcoreapp2.2/ThyssenCorpAPI.AssemblyInfoInputs.cache
+/Users/madsthyssen/Documents/github/ThyssenCorpAPI/ThyssenCorpAPI/obj/Release/netcoreapp2.2/ThyssenCorpAPI.AssemblyInfo.cs
+/Users/madsthyssen/Documents/github/ThyssenCorpAPI/ThyssenCorpAPI/obj/Release/netcoreapp2.2/ThyssenCorpAPI.RazorTargetAssemblyInfo.cache
+/Users/madsthyssen/Documents/github/ThyssenCorpAPI/ThyssenCorpAPI/obj/Release/netcoreapp2.2/ThyssenCorpAPI.dll
+/Users/madsthyssen/Documents/github/ThyssenCorpAPI/ThyssenCorpAPI/obj/Release/netcoreapp2.2/ThyssenCorpAPI.pdb
