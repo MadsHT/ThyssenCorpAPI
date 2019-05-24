@@ -49,8 +49,6 @@ namespace ThyssenCorpAPI.Helpers
             JObject jo = null;
             string uid2 = null;
 
-            
-
             var uid = GetUIdFromUsername(username).Result;
 
             HttpResponseMessage response = await http.GetAsync(StatsPath + uid);
