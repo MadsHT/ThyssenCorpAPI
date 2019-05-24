@@ -47,11 +47,11 @@ namespace ThyssenCorpAPI.Helpers
             return jo;
         }
 
-        public JArray GetSoloStat(string compareTo, string username)
+        public JArray GetSoloStat(string compareToOld, string username)
         {
             JArray returnList = new JArray();
 
-            compareTo = CompareTo(compareTo);
+            var compareTo = CompareTo(compareToOld);
 
             var userStats = GetPlayerStatsFromUsername(username).Result;
 
@@ -66,19 +66,19 @@ namespace ThyssenCorpAPI.Helpers
                     data = userStats["data"][controller.ToString()]["defaultsolo"]["default"][compareTo];
                 }
 
-                var soloStat = new JObject();
-                soloStat.Add(controller.ToString(),
+                JObject nameAndFilter = new JObject();
+                nameAndFilter.Add("controller", ConvertController(controller.ToString()));
+                nameAndFilter.Add("filter", compareToOld);
+                nameAndFilter.Add("result",
                     data ?? $"{username} has no kills with {ConvertController(controller.ToString())}");
-                returnList.Add(soloStat);
+                returnList.Add(nameAndFilter);
             }
-
             return returnList;
         }
 
         public JArray GetPlayerComparedStats(string compareToOld, string username, string username2)
         {
             var compareTo = CompareTo(compareToOld);
-
 
             JArray returnList = new JArray();
             ArrayList usernames = new ArrayList();
@@ -88,18 +88,12 @@ namespace ThyssenCorpAPI.Helpers
             foreach (string name in usernames)
             {
                 JToken userToken = GetPlayerStatsFromUsername(name).Result;
-
                 var comparedToken = userToken["overallData"]["defaultModes"][compareTo];
-
                 JObject nameAndFilter = new JObject();
                 nameAndFilter.Add("name", name);
                 nameAndFilter.Add("filter", compareToOld);
-
-
                 nameAndFilter.Add("result",
                     comparedToken ?? $"There was a problem getting the {compareTo} from {name}");
-
-
                 returnList.Add(nameAndFilter);
             }
 
@@ -111,13 +105,13 @@ namespace ThyssenCorpAPI.Helpers
             switch (controller)
             {
                 case "touch":
-                    controller = "a phone or the switch";
+                    controller = "Telefon";
                     break;
                 case "gamepad":
-                    controller = "a game controller";
+                    controller = "Kontroller";
                     break;
                 case "keyboardmouse":
-                    controller = "keyboard and mouse";
+                    controller = "Tastatur og mus";
                     break;
             }
 
