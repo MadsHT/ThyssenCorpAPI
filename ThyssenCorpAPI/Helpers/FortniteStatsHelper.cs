@@ -79,6 +79,8 @@ namespace ThyssenCorpAPI.Helpers
         {
             compareTo = CompareTo(compareTo);
 
+            
+            
             JArray returnList = new JArray();
             ArrayList usernames = new ArrayList();
             usernames.Add(username);
@@ -92,7 +94,13 @@ namespace ThyssenCorpAPI.Helpers
 
                 var comparedToken = userToken["overallData"]["defaultModes"][compareTo];
 
-                comparedJObject.Add(name,
+                JObject nameAndFilter = new JObject();
+                nameAndFilter.Add("name", name);
+                nameAndFilter.Add("filter", compareTo);
+                
+                returnList.Add(nameAndFilter);
+                
+                comparedJObject.Add("result",
                     comparedToken ?? $"There was a problem getting the {compareTo} from {name}");
 
                 returnList.Add(comparedJObject);
