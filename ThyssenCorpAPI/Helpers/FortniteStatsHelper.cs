@@ -94,7 +94,10 @@ namespace ThyssenCorpAPI.Helpers
                 return new JArray(new JObject("Username 2 is empty"));
             }
 
-            return new JArray(user1Token, user2Token);
+            JToken comparedTokenForUser1 = user1Token["overallData"]["defaultModes"][compareTO];
+            JToken comparedTokenForUser2 = user2Token["overallData"]["defaultModes"][compareTO];
+
+            return new JArray(comparedTokenForUser1, comparedTokenForUser2);
         }
     }
 }
