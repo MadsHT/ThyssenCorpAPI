@@ -49,10 +49,7 @@ namespace ThyssenCorpAPI.Helpers
             JObject jo = null;
             string uid2 = null;
 
-            if (username2 != "")
-            {
-                uid2 = GetUIdFromUsername(username2).Result;
-            }
+            
 
             var uid = GetUIdFromUsername(username).Result;
 
@@ -62,10 +59,14 @@ namespace ThyssenCorpAPI.Helpers
                 jo = JObject.Parse(await response.Content.ReadAsStringAsync());
             }
 
-            response = await http.GetAsync(StatsPath + uid2);
-            if (response.IsSuccessStatusCode)
+            if (username2 != "")
             {
-                jo.Add(JObject.Parse(await response.Content.ReadAsStringAsync()));
+                uid2 = GetUIdFromUsername(username2).Result;
+                response = await http.GetAsync(StatsPath + uid2);
+                if (response.IsSuccessStatusCode)
+                {
+                    jo.Add(JObject.Parse(await response.Content.ReadAsStringAsync()));
+                }
             }
 
             return jo;
