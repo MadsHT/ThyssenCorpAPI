@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Cryptography.Xml;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 
 namespace ThyssenCorpAPI.Helpers
@@ -44,11 +45,10 @@ namespace ThyssenCorpAPI.Helpers
             return jo;
         }
 
-        public async Task<JArray> GetPlayerComparedStats(string username)
+        public async Task<JArray> GetPlayerComparedStats(string username, string username2)
         {
             JObject user1Token = null;
             JObject user2Token = null;
-            string username2 = "IAmCBJ";
             string uid2 = null;
 
             var uid = GetUIdFromUsername(username).Result;
@@ -59,13 +59,15 @@ namespace ThyssenCorpAPI.Helpers
                 user1Token = JObject.Parse(await response.Content.ReadAsStringAsync());
             }
 
-            uid2 = GetUIdFromUsername(username2).Result;
-            response = await http.GetAsync(StatsPath + uid2);
-            if (response.IsSuccessStatusCode)
+            if (username2 != String.Empty)
             {
-                user2Token = JObject.Parse(await response.Content.ReadAsStringAsync());
+                uid2 = GetUIdFromUsername(username2).Result;
+                response = await http.GetAsync(StatsPath + uid2);
+                if (response.IsSuccessStatusCode)
+                {
+                    user2Token = JObject.Parse(await response.Content.ReadAsStringAsync());
+                }
             }
-
 
             return new JArray(user1Token, user2Token);
         }
