@@ -55,24 +55,16 @@ namespace ThyssenCorpAPI.Helpers
 
             var userStats = GetPlayerStatsFromUsername(username).Result;
 
-            var controllers = userStats["devices"];
+            var data = userStats["overallData"]["defaultModes"][compareTo];
 
-            foreach (JToken controller in controllers)
+            JObject nameAndFilter = new JObject
             {
-                JToken data = null;
+                {"name", username},
+                {"filter", compareToOld},
+                {"result", data ?? $"{username} has no {compareToOld}"}
+            };
+            returnList.Add(nameAndFilter);
 
-                if (userStats["data"][controller.ToString()]["defaultsolo"] != null)
-                {
-                    data = userStats["data"][controller.ToString()]["defaultsolo"]["default"][compareTo];
-                }
-
-                JObject nameAndFilter = new JObject();
-                nameAndFilter.Add("controller", ConvertController(controller.ToString()));
-                nameAndFilter.Add("filter", compareToOld);
-                nameAndFilter.Add("result",
-                    data ?? $"{username} has no kills with {ConvertController(controller.ToString())}");
-                returnList.Add(nameAndFilter);
-            }
             return returnList;
         }
 
@@ -89,11 +81,12 @@ namespace ThyssenCorpAPI.Helpers
             {
                 JToken userToken = GetPlayerStatsFromUsername(name).Result;
                 var comparedToken = userToken["overallData"]["defaultModes"][compareTo];
-                JObject nameAndFilter = new JObject();
-                nameAndFilter.Add("name", name);
-                nameAndFilter.Add("filter", compareToOld);
-                nameAndFilter.Add("result",
-                    comparedToken ?? $"There was a problem getting the {compareTo} from {name}");
+                JObject nameAndFilter = new JObject
+                {
+                    {"name", name},
+                    {"filter", compareToOld},
+                    {"result", comparedToken ?? $"There was a problem getting the {compareTo} from {name}"}
+                };
                 returnList.Add(nameAndFilter);
             }
 

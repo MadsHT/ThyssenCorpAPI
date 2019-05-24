@@ -27,7 +27,6 @@ namespace ThyssenCorpAPI.Controllers
         [Route("compare/{inputString}")]
         public ActionResult<JArray> GetStatsCompare(string inputString)
         {
-            
             string[] inputStringSplit = inputString.Split('-');
 
             string username = inputStringSplit[1];
@@ -49,8 +48,14 @@ namespace ThyssenCorpAPI.Controllers
         {
             string[] inputStringSplit = inputString.Split('-');
 
-            string username = inputStringSplit[1];
+            string username = "IAmCBJ";
+            
             string compareTo = inputStringSplit[0];
+
+            if (inputStringSplit.Length > 1)
+            {
+                username = inputStringSplit[1];
+            }
             
             return FSH.GetSoloStat(compareTo, username);
         }
