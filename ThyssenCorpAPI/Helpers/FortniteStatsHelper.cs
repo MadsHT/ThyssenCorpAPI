@@ -44,9 +44,10 @@ namespace ThyssenCorpAPI.Helpers
             return jo;
         }
 
-        public async Task<JToken> GetPlayerComparedStats(string username)
+        public async Task<JArray> GetPlayerComparedStats(string username)
         {
-            JObject jo = null;
+            JObject user1Token = null;
+            JObject user2Token = null;
             string username2 = "IAmCBJ";
             string uid2 = null;
 
@@ -55,18 +56,18 @@ namespace ThyssenCorpAPI.Helpers
             HttpResponseMessage response = await http.GetAsync(StatsPath + uid);
             if (response.IsSuccessStatusCode)
             {
-                jo = JObject.Parse(await response.Content.ReadAsStringAsync());
+                user1Token = JObject.Parse(await response.Content.ReadAsStringAsync());
             }
 
             uid2 = GetUIdFromUsername(username2).Result;
             response = await http.GetAsync(StatsPath + uid2);
             if (response.IsSuccessStatusCode)
             {
-                jo.Add(JObject.Parse(await response.Content.ReadAsStringAsync()));
+                user2Token = JObject.Parse(await response.Content.ReadAsStringAsync());
             }
 
 
-            return jo;
+            return new JArray(username, username2);
         }
     }
 }
