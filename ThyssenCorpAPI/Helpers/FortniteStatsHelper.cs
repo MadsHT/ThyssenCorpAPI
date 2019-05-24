@@ -40,31 +40,34 @@ namespace ThyssenCorpAPI.Helpers
             {
                 jo = JObject.Parse(await response.Content.ReadAsStringAsync());
             }
+
             return jo;
         }
 
         public async Task<JToken> GetPlayerComparedStats(string username, string username2)
         {
             JObject jo = null;
+            string uid2 = null;
 
             if (username2 != "")
             {
-                var uid2 = GetUIdFromUsername(username2).Result;
+                uid2 = GetUIdFromUsername(username2).Result;
             }
 
             var uid = GetUIdFromUsername(username).Result;
-            
+
             HttpResponseMessage response = await http.GetAsync(StatsPath + uid);
             if (response.IsSuccessStatusCode)
             {
                 jo = JObject.Parse(await response.Content.ReadAsStringAsync());
             }
-            
-            response = await http.GetAsync(StatsPath + uid);
+
+            response = await http.GetAsync(StatsPath + uid2);
             if (response.IsSuccessStatusCode)
             {
                 jo.Add(JObject.Parse(await response.Content.ReadAsStringAsync()));
             }
+
             return jo;
         }
     }
