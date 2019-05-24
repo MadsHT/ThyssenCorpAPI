@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d68a62d-37fe-49c7-866a-aee7cfc2a019" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ThyssenCorpAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThyssenCorpAPI/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ThyssenCorpAPI/Controllers/FortniteController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThyssenCorpAPI/Controllers/FortniteController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ThyssenCorpAPI/Helpers/FortniteStatsHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThyssenCorpAPI/Helpers/FortniteStatsHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThyssenCorpAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThyssenCorpAPI/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThyssenCorpAPI/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThyssenCorpAPI/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThyssenCorpAPI/bin/Debug/netcoreapp2.2/ThyssenCorpAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ThyssenCorpAPI/bin/Debug/netcoreapp2.2/ThyssenCorpAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThyssenCorpAPI/bin/Debug/netcoreapp2.2/ThyssenCorpAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ThyssenCorpAPI/bin/Debug/netcoreapp2.2/ThyssenCorpAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThyssenCorpAPI/obj/Debug/netcoreapp2.2/ThyssenCorpAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ThyssenCorpAPI/obj/Debug/netcoreapp2.2/ThyssenCorpAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThyssenCorpAPI/obj/Debug/netcoreapp2.2/ThyssenCorpAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ThyssenCorpAPI/obj/Debug/netcoreapp2.2/ThyssenCorpAPI.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,45 +16,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ThyssenCorpAPI/Controllers/FortniteController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+            <state relative-caret-position="254">
+              <caret line="30" column="77" selection-start-line="30" selection-start-column="77" selection-end-line="30" selection-end-column="77" />
               <folding>
-                <marker date="1558704485439" expanded="true" signature="6:226" ph="..." />
-                <marker date="1558704485439" expanded="true" signature="264:1250" ph="{...}" />
-                <marker date="1558704485439" expanded="true" signature="371:1248" ph="{...}" />
-                <marker date="1558704485439" expanded="true" signature="602:690" ph="{...}" />
-                <marker date="1558704485439" expanded="true" signature="888:994" ph="{...}" />
-                <marker date="1558704485439" expanded="true" signature="1158:1242" ph="{...}" />
+                <marker date="1558705874894" expanded="true" signature="6:226" ph="..." />
+                <marker date="1558705874894" expanded="true" signature="264:1236" ph="{...}" />
+                <marker date="1558705874894" expanded="true" signature="371:1234" ph="{...}" />
+                <marker date="1558705874894" expanded="true" signature="602:690" ph="{...}" />
+                <marker date="1558705874894" expanded="true" signature="888:987" ph="{...}" />
+                <marker date="1558705874894" expanded="true" signature="1151:1228" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThyssenCorpAPI/Helpers/FortniteStatsHelper.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-37">
-              <caret line="70" column="59" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
+            <state relative-caret-position="-219">
+              <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
               <folding>
-                <marker date="1558705488410" expanded="false" signature="6:311" ph="..." />
-                <marker date="1558705488410" expanded="true" signature="345:4288" ph="{...}" />
-                <marker date="1558705488410" expanded="true" signature="384:4286" ph="{...}" />
-                <marker date="1558705488410" expanded="true" signature="777:1105" ph="{...}" />
-                <marker date="1558705488410" expanded="true" signature="945:1053" ph="{...}" />
-                <marker date="1558705488410" expanded="true" signature="1184:1553" ph="{...}" />
-                <marker date="1558705488410" expanded="true" signature="1411:1519" ph="{...}" />
-                <marker date="1558705488410" expanded="true" signature="1635:2501" ph="{...}" />
-                <marker date="1558705488410" expanded="true" signature="1921:2459" ph="{...}" />
-                <marker date="1558705488410" expanded="true" signature="2057:2199" ph="{...}" />
-                <marker date="1558705488410" expanded="true" signature="2612:3374" ph="{...}" />
-                <marker date="1558705488410" expanded="true" signature="2889:3332" ph="{...}" />
-                <marker date="1558705488410" expanded="true" signature="3442:3902" ph="{...}" />
-                <marker date="1558705488410" expanded="true" signature="3484:3860" ph="{...}" />
-                <marker date="1558705488410" expanded="true" signature="3961:4280" ph="{...}" />
-                <marker date="1558705488410" expanded="true" signature="4002:4239" ph="{...}" />
+                <marker date="1558705869517" expanded="false" signature="6:311" ph="..." />
+                <marker date="1558705869517" expanded="true" signature="345:4264" ph="{...}" />
+                <marker date="1558705869517" expanded="true" signature="384:4262" ph="{...}" />
+                <marker date="1558705869517" expanded="true" signature="777:1105" ph="{...}" />
+                <marker date="1558705869517" expanded="true" signature="945:1053" ph="{...}" />
+                <marker date="1558705869517" expanded="true" signature="1184:1553" ph="{...}" />
+                <marker date="1558705869517" expanded="true" signature="1411:1519" ph="{...}" />
+                <marker date="1558705869517" expanded="true" signature="1623:2489" ph="{...}" />
+                <marker date="1558705869517" expanded="true" signature="1909:2447" ph="{...}" />
+                <marker date="1558705869517" expanded="true" signature="2045:2187" ph="{...}" />
+                <marker date="1558705869517" expanded="true" signature="2588:3350" ph="{...}" />
+                <marker date="1558705869517" expanded="true" signature="2865:3308" ph="{...}" />
+                <marker date="1558705869517" expanded="true" signature="3418:3878" ph="{...}" />
+                <marker date="1558705869517" expanded="true" signature="3460:3836" ph="{...}" />
+                <marker date="1558705869517" expanded="true" signature="3937:4256" ph="{...}" />
+                <marker date="1558705869517" expanded="true" signature="3978:4215" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -86,8 +79,8 @@
         <option value="$PROJECT_DIR$/ThyssenCorpAPI/Startup.cs" />
         <option value="$PROJECT_DIR$/ThyssenCorpAPI/appsettings.Development.json" />
         <option value="$PROJECT_DIR$/ThyssenCorpAPI/Program.cs" />
-        <option value="$PROJECT_DIR$/ThyssenCorpAPI/Controllers/FortniteController.cs" />
         <option value="$PROJECT_DIR$/ThyssenCorpAPI/Helpers/FortniteStatsHelper.cs" />
+        <option value="$PROJECT_DIR$/ThyssenCorpAPI/Controllers/FortniteController.cs" />
       </list>
     </option>
   </component>
@@ -185,12 +178,12 @@
       <option name="presentableId" value="Default" />
       <updated>1558640313580</updated>
       <workItem from="1558640316133" duration="6772000" />
-      <workItem from="1558678059286" duration="12413000" />
+      <workItem from="1558678059286" duration="12621000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19185000" />
+    <option name="totallyTimeSpent" value="19393000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -203,15 +196,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="956" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49913043" visible="true" weight="0.16483517" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49913043" visible="true" weight="0.16483517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" sideWeight="0.5008696" side_tool="true" weight="0.16483517" />
+      <window_info anchor="bottom" id="Inspection Results" visible="true" weight="0.3298611" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33449075" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33449075" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -338,42 +333,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ThyssenCorpAPI/Controllers/FortniteController.cs">
+    <entry file="file://$PROJECT_DIR$/ThyssenCorpAPI/Helpers/FortniteStatsHelper.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+        <state relative-caret-position="-219">
+          <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
           <folding>
-            <marker date="1558704485439" expanded="true" signature="6:226" ph="..." />
-            <marker date="1558704485439" expanded="true" signature="264:1250" ph="{...}" />
-            <marker date="1558704485439" expanded="true" signature="371:1248" ph="{...}" />
-            <marker date="1558704485439" expanded="true" signature="602:690" ph="{...}" />
-            <marker date="1558704485439" expanded="true" signature="888:994" ph="{...}" />
-            <marker date="1558704485439" expanded="true" signature="1158:1242" ph="{...}" />
+            <marker date="1558705869517" expanded="false" signature="6:311" ph="..." />
+            <marker date="1558705869517" expanded="true" signature="345:4264" ph="{...}" />
+            <marker date="1558705869517" expanded="true" signature="384:4262" ph="{...}" />
+            <marker date="1558705869517" expanded="true" signature="777:1105" ph="{...}" />
+            <marker date="1558705869517" expanded="true" signature="945:1053" ph="{...}" />
+            <marker date="1558705869517" expanded="true" signature="1184:1553" ph="{...}" />
+            <marker date="1558705869517" expanded="true" signature="1411:1519" ph="{...}" />
+            <marker date="1558705869517" expanded="true" signature="1623:2489" ph="{...}" />
+            <marker date="1558705869517" expanded="true" signature="1909:2447" ph="{...}" />
+            <marker date="1558705869517" expanded="true" signature="2045:2187" ph="{...}" />
+            <marker date="1558705869517" expanded="true" signature="2588:3350" ph="{...}" />
+            <marker date="1558705869517" expanded="true" signature="2865:3308" ph="{...}" />
+            <marker date="1558705869517" expanded="true" signature="3418:3878" ph="{...}" />
+            <marker date="1558705869517" expanded="true" signature="3460:3836" ph="{...}" />
+            <marker date="1558705869517" expanded="true" signature="3937:4256" ph="{...}" />
+            <marker date="1558705869517" expanded="true" signature="3978:4215" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ThyssenCorpAPI/Helpers/FortniteStatsHelper.cs">
+    <entry file="file://$PROJECT_DIR$/ThyssenCorpAPI/Controllers/FortniteController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <caret line="70" column="59" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
+        <state relative-caret-position="254">
+          <caret line="30" column="77" selection-start-line="30" selection-start-column="77" selection-end-line="30" selection-end-column="77" />
           <folding>
-            <marker date="1558705488410" expanded="false" signature="6:311" ph="..." />
-            <marker date="1558705488410" expanded="true" signature="345:4288" ph="{...}" />
-            <marker date="1558705488410" expanded="true" signature="384:4286" ph="{...}" />
-            <marker date="1558705488410" expanded="true" signature="777:1105" ph="{...}" />
-            <marker date="1558705488410" expanded="true" signature="945:1053" ph="{...}" />
-            <marker date="1558705488410" expanded="true" signature="1184:1553" ph="{...}" />
-            <marker date="1558705488410" expanded="true" signature="1411:1519" ph="{...}" />
-            <marker date="1558705488410" expanded="true" signature="1635:2501" ph="{...}" />
-            <marker date="1558705488410" expanded="true" signature="1921:2459" ph="{...}" />
-            <marker date="1558705488410" expanded="true" signature="2057:2199" ph="{...}" />
-            <marker date="1558705488410" expanded="true" signature="2612:3374" ph="{...}" />
-            <marker date="1558705488410" expanded="true" signature="2889:3332" ph="{...}" />
-            <marker date="1558705488410" expanded="true" signature="3442:3902" ph="{...}" />
-            <marker date="1558705488410" expanded="true" signature="3484:3860" ph="{...}" />
-            <marker date="1558705488410" expanded="true" signature="3961:4280" ph="{...}" />
-            <marker date="1558705488410" expanded="true" signature="4002:4239" ph="{...}" />
+            <marker date="1558705874894" expanded="true" signature="6:226" ph="..." />
+            <marker date="1558705874894" expanded="true" signature="264:1236" ph="{...}" />
+            <marker date="1558705874894" expanded="true" signature="371:1234" ph="{...}" />
+            <marker date="1558705874894" expanded="true" signature="602:690" ph="{...}" />
+            <marker date="1558705874894" expanded="true" signature="888:987" ph="{...}" />
+            <marker date="1558705874894" expanded="true" signature="1151:1228" ph="{...}" />
           </folding>
         </state>
       </provider>

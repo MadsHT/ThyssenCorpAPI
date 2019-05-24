@@ -47,7 +47,7 @@ namespace ThyssenCorpAPI.Helpers
             return jo;
         }
 
-        public async Task<JArray> GetSoloStat(string compareTo, string username)
+        public JArray GetSoloStat(string compareTo, string username)
         {
             JArray returnList = new JArray();
 
@@ -75,7 +75,7 @@ namespace ThyssenCorpAPI.Helpers
             return returnList;
         }
 
-        public async Task<JArray> GetPlayerComparedStats(string compareTo, string username, string username2)
+        public JArray GetPlayerComparedStats(string compareTo, string username, string username2)
         {
             compareTo = CompareTo(compareTo);
 
