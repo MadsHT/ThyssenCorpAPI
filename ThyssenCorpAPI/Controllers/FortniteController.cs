@@ -27,7 +27,6 @@ namespace ThyssenCorpAPI.Controllers
         [Route("compare/{inputString}")]
         public ActionResult<JArray> GetStatsCompare(string inputString)
         {
-            return new ActionResult<JArray>(new JArray(inputString));
             
             string[] inputStringSplit = inputString.Split('-');
 
@@ -41,7 +40,7 @@ namespace ThyssenCorpAPI.Controllers
                 username2 = inputStringSplit[2];
             }
 
-            //return FSH.GetPlayerComparedStats(compareTo, username, username2);
+            return FSH.GetPlayerComparedStats(compareTo, username, username2);
         }
 
         [HttpGet]
