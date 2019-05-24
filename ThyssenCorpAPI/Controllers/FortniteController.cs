@@ -26,9 +26,9 @@ namespace ThyssenCorpAPI.Controllers
 
         [HttpGet]
         [Route("compare/{username}")]
-        public ActionResult<JArray> GetStatsCompare(String username, [FromQuery] string username2 = "IAmCBJ")
+        public ActionResult<JArray> GetStatsCompare(string compareTo, [FromQuery] String username, [FromQuery] string username2 = "IAmCBJ")
         {
-            return FSH.GetPlayerComparedStats(username, username2).Result;
+            return FSH.GetPlayerComparedStats(compareTo, username, username2).Result;
         }
     }
 }

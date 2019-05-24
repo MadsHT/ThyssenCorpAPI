@@ -45,7 +45,7 @@ namespace ThyssenCorpAPI.Helpers
             return jo;
         }
 
-        public async Task<JArray> GetPlayerComparedStats(string username, string username2)
+        public async Task<JArray> GetPlayerComparedStats(string compareTO, string username, string username2)
         {
             JObject user1Token = null;
             JObject user2Token = null;
@@ -58,6 +58,10 @@ namespace ThyssenCorpAPI.Helpers
             {
                 user1Token = JObject.Parse(await response.Content.ReadAsStringAsync());
             }
+            else
+            {
+                return new JArray(response.Content);
+            }
 
             if (username2 != String.Empty)
             {
@@ -67,6 +71,10 @@ namespace ThyssenCorpAPI.Helpers
                 {
                     user2Token = JObject.Parse(await response.Content.ReadAsStringAsync());
                 }
+            }
+            else
+            {
+                return new JArray(response.Content);
             }
 
             return new JArray(user1Token, user2Token);
