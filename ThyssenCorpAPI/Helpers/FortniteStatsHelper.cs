@@ -67,7 +67,7 @@ namespace ThyssenCorpAPI.Helpers
             }
 
 
-            return new JArray(username, username2);
+            return new JArray(user1Token, user2Token);
         }
     }
 }
