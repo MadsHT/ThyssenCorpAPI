@@ -75,9 +75,9 @@ namespace ThyssenCorpAPI.Helpers
             return returnList;
         }
 
-        public JArray GetPlayerComparedStats(string compareTo, string username, string username2)
+        public JArray GetPlayerComparedStats(string compareToOld, string username, string username2)
         {
-            compareTo = CompareTo(compareTo);
+            var compareTo = CompareTo(compareToOld);
 
 
             JArray returnList = new JArray();
@@ -93,7 +93,7 @@ namespace ThyssenCorpAPI.Helpers
 
                 JObject nameAndFilter = new JObject();
                 nameAndFilter.Add("name", name);
-                nameAndFilter.Add("filter", compareTo);
+                nameAndFilter.Add("filter", compareToOld);
 
 
                 nameAndFilter.Add("result",
