@@ -44,9 +44,10 @@ namespace ThyssenCorpAPI.Helpers
             return jo;
         }
 
-        public async Task<JToken> GetPlayerComparedStats(string username, string username2)
+        public async Task<JToken> GetPlayerComparedStats(string username)
         {
             JObject jo = null;
+            string username2 = "IAmCBJ";
             string uid2 = null;
 
             var uid = GetUIdFromUsername(username).Result;
@@ -57,15 +58,13 @@ namespace ThyssenCorpAPI.Helpers
                 jo = JObject.Parse(await response.Content.ReadAsStringAsync());
             }
 
-            if (username2 != "")
+            uid2 = GetUIdFromUsername(username2).Result;
+            response = await http.GetAsync(StatsPath + uid2);
+            if (response.IsSuccessStatusCode)
             {
-                uid2 = GetUIdFromUsername(username2).Result;
-                response = await http.GetAsync(StatsPath + uid2);
-                if (response.IsSuccessStatusCode)
-                {
-                    jo.Add(JObject.Parse(await response.Content.ReadAsStringAsync()));
-                }
+                jo.Add(JObject.Parse(await response.Content.ReadAsStringAsync()));
             }
+
 
             return jo;
         }
