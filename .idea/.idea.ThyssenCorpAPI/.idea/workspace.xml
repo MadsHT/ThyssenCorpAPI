@@ -15,14 +15,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ThyssenCorpAPI/Controllers/FortniteController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+            <state relative-caret-position="330">
+              <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
               <folding>
-                <marker date="1558688761590" expanded="true" signature="6:226" ph="..." />
-                <marker date="1558688761590" expanded="true" signature="264:955" ph="{...}" />
-                <marker date="1558688761590" expanded="true" signature="371:953" ph="{...}" />
-                <marker date="1558688761590" expanded="true" signature="605:688" ph="{...}" />
-                <marker date="1558688761590" expanded="true" signature="852:947" ph="{...}" />
+                <marker date="1558689207726" expanded="true" signature="6:226" ph="..." />
+                <marker date="1558689207726" expanded="true" signature="264:952" ph="{...}" />
+                <marker date="1558689207726" expanded="true" signature="371:950" ph="{...}" />
+                <marker date="1558689207726" expanded="true" signature="602:685" ph="{...}" />
+                <marker date="1558689207726" expanded="true" signature="849:944" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -160,12 +160,12 @@
       <option name="presentableId" value="Default" />
       <updated>1558640313580</updated>
       <workItem from="1558640316133" duration="6772000" />
-      <workItem from="1558678059286" duration="1969000" />
+      <workItem from="1558678059286" duration="2257000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8741000" />
+    <option name="totallyTimeSpent" value="9029000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -330,14 +330,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ThyssenCorpAPI/Controllers/FortniteController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+        <state relative-caret-position="330">
+          <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
           <folding>
-            <marker date="1558688761590" expanded="true" signature="6:226" ph="..." />
-            <marker date="1558688761590" expanded="true" signature="264:955" ph="{...}" />
-            <marker date="1558688761590" expanded="true" signature="371:953" ph="{...}" />
-            <marker date="1558688761590" expanded="true" signature="605:688" ph="{...}" />
-            <marker date="1558688761590" expanded="true" signature="852:947" ph="{...}" />
+            <marker date="1558689207726" expanded="true" signature="6:226" ph="..." />
+            <marker date="1558689207726" expanded="true" signature="264:952" ph="{...}" />
+            <marker date="1558689207726" expanded="true" signature="371:950" ph="{...}" />
+            <marker date="1558689207726" expanded="true" signature="602:685" ph="{...}" />
+            <marker date="1558689207726" expanded="true" signature="849:944" ph="{...}" />
           </folding>
         </state>
       </provider>

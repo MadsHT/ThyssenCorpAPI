@@ -16,8 +16,8 @@ namespace ThyssenCorpAPI.Controllers
         private FortniteStatsHelper FSH = new FortniteStatsHelper();
 
         // GET api/fortnite/stats/username
-        [HttpGet("{username}")]
-        [Route("/stats")]
+        [HttpGet]
+        [Route("/stats/{username}")]
         public ActionResult<JToken> Get(string username)
         {
             return FSH.GetPlayerStatsFromUID(username).Result;
