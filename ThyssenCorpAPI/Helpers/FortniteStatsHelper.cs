@@ -68,7 +68,7 @@ namespace ThyssenCorpAPI.Helpers
             }
             else
             {
-                return new JArray(response.Content);
+                return new JArray(new JObject("there was a problem getting stats for: " + username));
             }
 
             if (username2 != String.Empty)
@@ -84,10 +84,14 @@ namespace ThyssenCorpAPI.Helpers
                 {
                     user2Token = JObject.Parse(await response.Content.ReadAsStringAsync());
                 }
+                else
+                {
+                    return new JArray(new JObject("there was a problem getting stats for: " + username));
+                }
             }
             else
             {
-                return new JArray(response.Content);
+                return new JArray(new JObject("Username 2 is empty"));
             }
 
             return new JArray(user1Token, user2Token);
