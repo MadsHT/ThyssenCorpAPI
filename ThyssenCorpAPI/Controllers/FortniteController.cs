@@ -24,11 +24,11 @@ namespace ThyssenCorpAPI.Controllers
             return FSH.GetPlayerStatsFromUID(username).Result;
         }
 
-        /*[HttpGet("{username}")]
-        [Route("/compare")]
+        [HttpGet]
+        [Route("compare/{username}")]
         public ActionResult<JToken> Get(String username = "IAmCBJ", [FromQuery] string username2 = "")
         {
             return FSH.GetPlayerComparedStats(username, username2).Result;
-        }*/
+        }
     }
 }
