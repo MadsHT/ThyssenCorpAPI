@@ -15,15 +15,16 @@ namespace ThyssenCorpAPI.Controllers
     {
         private FortniteStatsHelper FSH = new FortniteStatsHelper();
 
-        // GET api/fortnite/username
-        [HttpGet("/stats/{username}")]
+        // GET api/fortnite/stats/username
+        [HttpGet("{username}")]
+        [Route("/stats")]
         public ActionResult<JToken> Get(string username)
         {
             return FSH.GetPlayerStatsFromUID(username).Result;
         }
 
-        [HttpGet()]
-        [Route("/compare/{username}")]
+        [HttpGet("{username}")]
+        [Route("/compare")]
         public ActionResult<JToken> Get(String username = "IAmCBJ", [FromQuery] string username2 = "")
         {
             return FSH.GetPlayerComparedStats(username, username2).Result;
