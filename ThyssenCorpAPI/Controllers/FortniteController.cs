@@ -26,7 +26,7 @@ namespace ThyssenCorpAPI.Controllers
 
         [HttpGet]
         [Route("compare/{username}/{username2}")]
-        public ActionResult<JToken> Get(String username = "IAmCBJ", string username2 = "")
+        public ActionResult<JToken> Get(String username, string username2 = "IAmCBJ")
         {
             return FSH.GetPlayerComparedStats(username, username2).Result;
         }
