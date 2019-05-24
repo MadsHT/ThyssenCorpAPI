@@ -32,7 +32,7 @@ namespace ThyssenCorpAPI
             {
                 host = new WebHostBuilder()
                     .UseKestrel()
-                    .UseUrls("http://192.168.0.35")
+                    .UseUrls("http://192.168.0.32")
                     .UseContentRoot(Directory.GetCurrentDirectory())
                     .UseStartup<Startup>()
                     .Build();
