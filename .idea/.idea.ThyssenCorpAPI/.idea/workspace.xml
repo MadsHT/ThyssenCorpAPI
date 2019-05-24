@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5d68a62d-37fe-49c7-866a-aee7cfc2a019" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/ThyssenCorpAPI/Controllers/FortniteController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThyssenCorpAPI/Controllers/FortniteController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThyssenCorpAPI/Helpers/FortniteStatsHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ThyssenCorpAPI/Helpers/FortniteStatsHelper.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,13 +16,13 @@
         <entry file="file://$PROJECT_DIR$/ThyssenCorpAPI/Controllers/FortniteController.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
-              <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+              <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
               <folding>
-                <marker date="1558687627662" expanded="true" signature="6:226" ph="..." />
-                <marker date="1558687627662" expanded="true" signature="264:923" ph="{...}" />
-                <marker date="1558687627662" expanded="true" signature="371:921" ph="{...}" />
-                <marker date="1558687627662" expanded="true" signature="573:656" ph="{...}" />
-                <marker date="1558687627662" expanded="true" signature="820:915" ph="{...}" />
+                <marker date="1558687695931" expanded="true" signature="6:226" ph="..." />
+                <marker date="1558687695931" expanded="true" signature="264:929" ph="{...}" />
+                <marker date="1558687695931" expanded="true" signature="371:927" ph="{...}" />
+                <marker date="1558687695931" expanded="true" signature="580:663" ph="{...}" />
+                <marker date="1558687695931" expanded="true" signature="826:921" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -161,12 +160,12 @@
       <option name="presentableId" value="Default" />
       <updated>1558640313580</updated>
       <workItem from="1558640316133" duration="6772000" />
-      <workItem from="1558678059286" duration="1658000" />
+      <workItem from="1558678059286" duration="1730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8430000" />
+    <option name="totallyTimeSpent" value="8502000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -332,13 +331,13 @@
     <entry file="file://$PROJECT_DIR$/ThyssenCorpAPI/Controllers/FortniteController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
           <folding>
-            <marker date="1558687627662" expanded="true" signature="6:226" ph="..." />
-            <marker date="1558687627662" expanded="true" signature="264:923" ph="{...}" />
-            <marker date="1558687627662" expanded="true" signature="371:921" ph="{...}" />
-            <marker date="1558687627662" expanded="true" signature="573:656" ph="{...}" />
-            <marker date="1558687627662" expanded="true" signature="820:915" ph="{...}" />
+            <marker date="1558687695931" expanded="true" signature="6:226" ph="..." />
+            <marker date="1558687695931" expanded="true" signature="264:929" ph="{...}" />
+            <marker date="1558687695931" expanded="true" signature="371:927" ph="{...}" />
+            <marker date="1558687695931" expanded="true" signature="580:663" ph="{...}" />
+            <marker date="1558687695931" expanded="true" signature="826:921" ph="{...}" />
           </folding>
         </state>
       </provider>
