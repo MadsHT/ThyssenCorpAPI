@@ -34,6 +34,7 @@ namespace ThyssenCorpAPI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                
             }
             else
             {

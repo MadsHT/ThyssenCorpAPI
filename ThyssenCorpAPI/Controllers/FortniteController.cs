@@ -21,14 +21,21 @@ namespace ThyssenCorpAPI.Controllers
 
         public ActionResult<JToken> Get(string username)
         {
-            return FSH.GetPlayerStatsFromUID(username).Result;
+            return FSH.GetPlayerStatsFromUsername(username).Result;
         }
 
         [HttpGet]
-        [Route("compare/{username}")]
+        [Route("compare/{compareTo}")]
         public ActionResult<JArray> GetStatsCompare(string compareTo, [FromQuery] String username, [FromQuery] string username2 = "IAmCBJ")
         {
             return FSH.GetPlayerComparedStats(compareTo, username, username2).Result;
+        }
+        
+        [HttpGet]
+        [Route("soloStats/{compareTo}")]
+        public ActionResult<JArray> GetSoloStats(string compareTo, [FromQuery] String username)
+        {
+            return FSH.GetSoloStat(compareTo, username).Result;
         }
     }
 }

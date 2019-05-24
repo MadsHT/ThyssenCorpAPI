@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -32,7 +34,7 @@ namespace ThyssenCorpAPI.Helpers
             return jo["uid"].ToString();
         }
 
-        public async Task<JToken> GetPlayerStatsFromUID(string username)
+        public async Task<JToken> GetPlayerStatsFromUsername(string username)
         {
             var uid = GetUIdFromUsername(username).Result;
             JObject jo = null;
@@ -41,63 +43,95 @@ namespace ThyssenCorpAPI.Helpers
             {
                 jo = JObject.Parse(await response.Content.ReadAsStringAsync());
             }
-            else
-            {
-                jo = new JObject("There was a problem with getting " + username);
-            }
 
             return jo;
         }
 
-        public async Task<JArray> GetPlayerComparedStats(string compareTO, string username, string username2)
+        public async Task<JArray> GetSoloStat(string compareTo, string username)
         {
-            JObject user1Token = null;
-            JObject user2Token = null;
-            string uid2 = null;
+            JArray returnList = new JArray();
 
-            var uid = GetUIdFromUsername(username).Result;
-            if (uid.Contains("problem"))
-            {
-                return new JArray(new JObject(uid));
-            }
+            compareTo = CompareTo(compareTo);
 
-            HttpResponseMessage response = await http.GetAsync(StatsPath + uid);
-            if (response.IsSuccessStatusCode)
-            {
-                user1Token = JObject.Parse(await response.Content.ReadAsStringAsync());
-            }
-            else
-            {
-                return new JArray(new JObject("there was a problem getting stats for: " + username));
-            }
+            var userStats = GetPlayerStatsFromUsername(username).Result;
 
-            if (username2 != String.Empty)
+            var controllers = userStats["devices"];
+
+            foreach (JToken controller in controllers)
             {
-                uid2 = GetUIdFromUsername(username2).Result;
-                if (uid.Contains("problem"))
+                JToken data = null;
+
+                if (userStats["data"][controller.ToString()]["defaultsolo"] != null)
                 {
-                    return new JArray(new JObject(uid));
+                    data = userStats["data"][controller.ToString()]["defaultsolo"]["default"][compareTo];
                 }
-                
-                response = await http.GetAsync(StatsPath + uid2);
-                if (response.IsSuccessStatusCode)
-                {
-                    user2Token = JObject.Parse(await response.Content.ReadAsStringAsync());
-                }
-                else
-                {
-                    return new JArray(new JObject("there was a problem getting stats for: " + username));
-                }
+
+                var soloStat = new JObject();
+                soloStat.Add(controller.ToString(),
+                    data ?? $"{username} has no kills with {ConvertController(controller.ToString())}");
+                returnList.Add(soloStat);
             }
-            else
+
+            return returnList;
+        }
+
+        public async Task<JArray> GetPlayerComparedStats(string compareTo, string username, string username2)
+        {
+            compareTo = CompareTo(compareTo);
+
+            JArray returnList = new JArray();
+            ArrayList usernames = new ArrayList();
+            usernames.Add(username);
+            usernames.Add(username2);
+
+            foreach (string name in usernames)
             {
-                return new JArray(new JObject("Username 2 is empty"));
+                JToken userToken = GetPlayerStatsFromUsername(name).Result;
+
+                JObject comparedJObject = new JObject();
+
+                var comparedToken = userToken["overallData"]["defaultModes"][compareTo];
+
+                comparedJObject.Add(name,
+                    comparedToken ?? $"There was a problem getting the {compareTo} from {name}");
+
+                returnList.Add(comparedJObject);
             }
 
-            JToken comparedTokenForUser1 = user1Token["overallData"]["defaultModes"][compareTO];
-            JToken comparedTokenForUser2 = user2Token["overallData"]["defaultModes"][compareTO];
+            return returnList;
+        }
 
-            return new JArray(comparedTokenForUser1, comparedTokenForUser2);
+        private static string ConvertController(string controller)
+        {
+            switch (controller)
+            {
+                case "touch":
+                    controller = "a phone or the switch";
+                    break;
+                case "gamepad":
+                    controller = "a game controller";
+                    break;
+                case "keyboardmouse":
+                    controller = "keyboard and mouse";
+                    break;
+            }
+
+            return controller;
+        }
+
+        private static string CompareTo(string compareTo)
+        {
+            switch (compareTo)
+            {
+                case "wins":
+                    compareTo = "placetop1";
+                    break;
+                case "matches":
+                    compareTo = "matchesplayed";
+                    break;
+            }
+
+            return compareTo;
         }
     }
 }

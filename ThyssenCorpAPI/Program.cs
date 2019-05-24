@@ -12,14 +12,32 @@ namespace ThyssenCorpAPI
 {
     public class Program
     {
+
         public static void Main(string[] args)
         {
-            var host = new WebHostBuilder()
-                .UseKestrel()
-                .UseUrls("http://192.168.0.35")
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseStartup<Startup>()
-                .Build();
+            var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+
+            IWebHost host = null;
+            
+            if (env == EnvironmentName.Development)
+            {
+                host = new WebHostBuilder()
+                    .UseKestrel()
+                    .UseUrls("http://localhost:5000")
+                    .UseContentRoot(Directory.GetCurrentDirectory())
+                    .UseStartup<Startup>()
+                    .Build();
+            }
+            else
+            {
+                host = new WebHostBuilder()
+                    .UseKestrel()
+                    .UseUrls("http://192.168.0.35")
+                    .UseContentRoot(Directory.GetCurrentDirectory())
+                    .UseStartup<Startup>()
+                    .Build();
+            }
+
 
             host.Run();
         }
