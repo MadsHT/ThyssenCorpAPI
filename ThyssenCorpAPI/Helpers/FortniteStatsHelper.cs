@@ -42,5 +42,30 @@ namespace ThyssenCorpAPI.Helpers
             }
             return jo;
         }
+
+        public async Task<JToken> GetPlayerComparedStats(string username, string username2)
+        {
+            JObject jo = null;
+
+            if (username2 != "")
+            {
+                var uid2 = GetUIdFromUsername(username2).Result;
+            }
+
+            var uid = GetUIdFromUsername(username).Result;
+            
+            HttpResponseMessage response = await http.GetAsync(StatsPath + uid);
+            if (response.IsSuccessStatusCode)
+            {
+                jo = JObject.Parse(await response.Content.ReadAsStringAsync());
+            }
+            
+            response = await http.GetAsync(StatsPath + uid);
+            if (response.IsSuccessStatusCode)
+            {
+                jo.Add(JObject.Parse(await response.Content.ReadAsStringAsync()));
+            }
+            return jo;
+        }
     }
 }

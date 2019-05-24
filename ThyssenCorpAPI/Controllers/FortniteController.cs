@@ -22,11 +22,10 @@ namespace ThyssenCorpAPI.Controllers
             return FSH.GetPlayerStatsFromUID(username).Result;
         }
 
-        // GET api/fortnite/uid/username
         [HttpGet()]
-        public ActionResult<string> Get()
+        public ActionResult<JToken> Get(String username = "IAmCBJ", [FromQuery] string username2 = "")
         {
-            return "hellow";
+            return FSH.GetPlayerComparedStats(username, username2).Result;
         }
     }
 }
