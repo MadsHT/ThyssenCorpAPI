@@ -41,6 +41,10 @@ namespace ThyssenCorpAPI.Helpers
             {
                 jo = JObject.Parse(await response.Content.ReadAsStringAsync());
             }
+            else
+            {
+                jo = new JObject("There was a problem with getting " + username);
+            }
 
             return jo;
         }
@@ -52,6 +56,10 @@ namespace ThyssenCorpAPI.Helpers
             string uid2 = null;
 
             var uid = GetUIdFromUsername(username).Result;
+            if (uid.Contains("problem"))
+            {
+                return new JArray(new JObject(uid));
+            }
 
             HttpResponseMessage response = await http.GetAsync(StatsPath + uid);
             if (response.IsSuccessStatusCode)
@@ -66,6 +74,11 @@ namespace ThyssenCorpAPI.Helpers
             if (username2 != String.Empty)
             {
                 uid2 = GetUIdFromUsername(username2).Result;
+                if (uid.Contains("problem"))
+                {
+                    return new JArray(new JObject(uid));
+                }
+                
                 response = await http.GetAsync(StatsPath + uid2);
                 if (response.IsSuccessStatusCode)
                 {
