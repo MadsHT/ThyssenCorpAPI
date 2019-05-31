@@ -61,7 +61,7 @@ namespace ThyssenCorpAPI.Helpers
             {
                 {"name", username},
                 {"filter", compareToOld},
-                {"result", data ?? $"{username} has no {compareToOld}"}
+                {"result", data ?? $"ingen"}
             };
             returnList.Add(nameAndFilter);
 
@@ -85,7 +85,7 @@ namespace ThyssenCorpAPI.Helpers
                 {
                     {"name", name},
                     {"filter", compareToOld},
-                    {"result", comparedToken ?? $"There was a problem getting the {compareTo} from {name}"}
+                    {"result", comparedToken ?? $"ingen"}
                 };
                 returnList.Add(nameAndFilter);
             }
